@@ -1,4 +1,7 @@
 /* Currently Underdevelopment */
+* {
+ font-family: Georgia;
+}
 
 a {
   color: MidnightBlue
@@ -8,9 +11,24 @@ a:hover {
 }
 
 h1 {
-  font-size: xx-large;
+  font-size: 200%;
   color: MidnightBlue;
 }
 h3 {
   color: DarkSlateGray
+}
+
+
+
+.header-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.header-column-l {
+  flex: 50%;
+}
+.header-column-r {
+  flex: 50%;
 }
