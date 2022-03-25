@@ -6,7 +6,7 @@
 body {
   padding: 5%;
   max-width:1000px;
-  min-width:500px;
+  min-width:550px;
   margin: auto;
 }
 /* :lang(zh-Hant) 	{font-family: Kai,KaiTi,serif;}
@@ -33,15 +33,21 @@ a:hover {
 
 
 ul.nav {
+  display: inline-block;
   list-style-type: none;
+  min-width: 90%;
   margin: auto;
   background-color: lightgray
-  width: 90%;
+  position:relative;
+  left:0;
 }
 
 ul.nav li {
-  display: inline;
+  display: inline-block;
+  padding: .5vh;
 }
+ul.nav li.r {float:right;}
+ul.nav li.l {float:left;}
 ul.nav li a {
   padding: .5vh;
   text-decoration: none;
