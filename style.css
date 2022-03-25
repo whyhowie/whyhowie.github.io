@@ -1,6 +1,6 @@
 /* Currently Underdevelopment */
 * {
- font-family: Georgia;
+ font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
 }
 
 body {
@@ -9,6 +9,9 @@ body {
   min-width:500px;
   margin: auto;
 }
+/* :lang(zh-Hant) 	{font-family: Kai,KaiTi,serif;}
+:lang(zh-Hans) 	{font-family: STSong,SimSun,serif;} */
+/* Language support */
 
 hr {
     border: none;
@@ -25,6 +28,27 @@ a {
 a:hover {
   background-color: AliceBlue;
 }
+
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  background-color: lightgray
+  width: 100%;
+}
+
+ul.nav li {
+  display: inline;
+}
+ul.nav li a {
+  padding: 1vh;
+  text-decoration: none;
+  /* background-color: lightgray; */
+}
+ul.nav li a:hover {
+  background-color: AliceBlue;
+}
+
 
 h1 {
   font-size: 200%;
