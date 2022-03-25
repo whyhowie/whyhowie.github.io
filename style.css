@@ -6,7 +6,17 @@
 body {
   padding: 5%;
   max-width:1000px;
+  min-width:500px;
 }
+
+hr {
+    border: none;
+    border-top: 2px solid lightgray;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
 
 a {
   color: MidnightBlue
@@ -20,7 +30,7 @@ h1 {
   color: MidnightBlue;
 }
 h3 {
-  color: DarkSlateGray
+  color: #222
 }
 
 p.copyright {
