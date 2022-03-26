@@ -47,11 +47,17 @@ body {
   min-width:550px;
   margin: auto;
   background-color: white;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 /* :lang(zh-Hant) 	{font-family: Kai,KaiTi,serif;}
 :lang(zh-Hans) 	{font-family: STSong,SimSun,serif;} */
 /* Language support */
-
+@keyframes fadeInAnimation {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 
 
