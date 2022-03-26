@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <title>Howie Wang - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <!-- <meta http-equiv="refresh" content="3; URL=https://howiewang.wixsite.com/portfolio" /> -->
   <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <!-- Use jQuery to add header -->
+  <script>
+  $(function(){
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+  });
+  </script>
+
 </head>
 
 
 <body>
-
-
-  <div class="header-columns">
-    <div class="header-column-l"><a href="index.html" style="text-decoration: none;">
-      <h1>Howie's <br>Non-Analog <br>Portfolio</h1></a>
+  <div id="header-nav">
+    <div id="header"></div>
+    <div id="nav">
+      <ul class="nav">
+        <li class="l"><a href="index.html"><div>Home<br>主页</div></a></li>
+        <li><a href="products.html"><div>Products<br>工</div></a></li>
+        <li><a href="#art"><div>Art<br>美</div></a></li>
+        <li><a href="#music"><div>Music<br>乐</div></a></li>
+      </ul>
     </div>
-    <div class="header-column-r">
-      <h1 style="text-align:right;"><img src="graphic_elements/yu_yong_logo.svg" alt="御用"
-          width="auto" height="110em"
-          style="position: relative; bottom:0%; right:0; align-self:bottom;"></h1>
-    </div>
+    <hr>
   </div>
 
-  <hr>
-  <div>
-    <ul class="nav">
-      <li class="l"><a href="index.html"><div>Home<br>主页</div></a></li>
-      <li><a href="#product"><div>Product<br>工</div></a></li>
-      <li><a href="#art"><div>Art<br>美</div></a></li>
-      <li><a href="#music"><div>Music<br>乐</div></a></li>
-      <!-- <li class="r"><a href="#about">About 关于</a></li> -->
-    </ul>
-  </div>
-  <!-- <p align="center"><strong>御用作品集</strong></p> -->
-  <hr>
 
-  <br>
-  <br>
-
+  <div id="content">
+  <h1></h1>
   <div class="card shadowed">
     <!-- <p style="text-align: center; display: block;"> -->
     <img src="graphic_elements/welcome_4K.jpg" width=100%>
@@ -78,12 +75,8 @@
   </div>
 
 
-  <br>
-  <br>
-
-  <hr>
-
-  <p class="copyright">© 2022 Hongyu "Howie" Wang</p>
+  <div id="footer"></div>
+</div>
 
 </body>
 </html>
