@@ -145,7 +145,19 @@ ul.nav li div:hover {
 
 
 
+/* The animation code */
+@keyframes background-highlight {
+  0% {background-color: AliceBlue;}
+  50% {background-color: lightgray;}
+  100% {background-color: AliceBlue;}
+}
 
+/* The element to apply the animation to */
+.background-highlight {
+  animation-name: background-highlight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
 
 p.copyright {
