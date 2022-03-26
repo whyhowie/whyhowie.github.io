@@ -107,13 +107,17 @@ ul.nav li div:hover {
 }
 
 
-
+/* CARDS */
 .card {
   width:80%;
   margin: auto;
   display: block;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: background-color 1s, box-shadow 1s, transform 1s;
 }
 
 .card-content {
