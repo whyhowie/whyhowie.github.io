@@ -233,15 +233,15 @@ p a:hover {
   max-height: 400px;
 }
 .card p {
-  font-size: clamp(10px, 1.5vh, 20px);
+  font-size: clamp(10px, 1.5vw, 15px);
 }
 
 .card-content {
   display: grid;
   grid-template-areas: "img text";
   grid-template-columns: 0.38fr 0.62fr;
-  height: 35vh;
-  max-height: 500px;
+  height: 20em;
+  max-height: 20em;
   overflow: hidden;
 }
 .card-content img {
