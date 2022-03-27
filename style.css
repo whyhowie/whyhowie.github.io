@@ -16,7 +16,7 @@
   top: 0;
   min-width:550px;
   width: 100%;
-  height: 28vh;
+  height: 26vh;
   z-index: 100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -34,14 +34,14 @@
   top: 0;
   width: 95%;
   margin:auto;
-  height: 20vh;
+  height: 18vh;
   position: fixed;
   z-index: -10;
   animation: bgLinear 10s linear infinite;
 }
 
 #content {
-  margin-top: 2em;
+  margin-top: 5vh;
 }
 
 
@@ -63,7 +63,8 @@
 
 
 ul.nav {
-  display: table;
+  display: block;
+  background-color: gray;
   list-style-type: none;
   vertical-align: middle;
   width: 80%;
@@ -71,6 +72,8 @@ ul.nav {
   margin: auto;
   padding: 0;
   background-color: white;
+  position:relative;
+  top: 0.5vh;
 }
 
 ul.nav li {
@@ -166,6 +169,7 @@ body {
 
 
 img {
+  vertical-align: top;
   overflow: hidden;
 }
 
@@ -210,11 +214,16 @@ p a:hover {
   margin: auto;
   display: block;
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .card:hover {
   transform: scale(1.1);
   transition: background-color 1s, box-shadow 1s, transform 1s;
+}
+.card img {
+  object-fit: cover;
+  object-position: top;
+  max-height: 35vh;
 }
 
 .card-content {
@@ -224,6 +233,7 @@ p a:hover {
 }
 .card-content img {
   object-fit: cover;
+  object-position: center;
   width: 100%;
   height:22em;
   margin-bottom:0;
