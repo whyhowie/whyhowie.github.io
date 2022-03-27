@@ -13,13 +13,12 @@
   background-color: white;
   position: -webkit-sticky;
   position: sticky;
-  top: 1%;
+  top: 0;
   min-width:550px;
-  width: 90%;
+  width: 100%;
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
-  border-radius: 10px;
 }
 
 #content {
@@ -51,9 +50,9 @@ h3 {
 }
 
 body {
-  padding: 0%;
-  padding-top: 1vh;
-  width: 100%;
+  padding: 0;
+  padding-top: 0;
+  width: 95%;
   max-width:1000px;
   min-width:550px;
   margin: auto;
@@ -62,21 +61,27 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   scroll-behavior: smooth;
+  outline: 10px solid lightgray;
+  overflow-y: auto;
 }
 body:after {
+  display: flex;
   content: "";
+  max-width:1000px;
+  min-width:550px;
   background: url(assets/Pattern.svg);
   background-repeat: repeat;
   background-size: 100px;
   opacity: 0.1;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
+  width: 95%;
+  margin:auto;
+  height: 100%;
   position: fixed;
   z-index: -1;
   animation: bgLinear 10s linear infinite;
 }
+
 /* :lang(zh-Hant) 	{font-family: Kai,KaiTi,serif;}
 :lang(zh-Hans) 	{font-family: STSong,SimSun,serif;} */
 /* Language support */
