@@ -94,7 +94,7 @@ ul.nav li {
 }
 ul.nav li:first-child {  border-left: solid 2px lightgray;}
 ul.nav li div {
-  padding: 5px;
+  padding: 10px;
   margin: auto;
   max-height: calc(var(--header-nav-max-height) * 3/26);
 }
