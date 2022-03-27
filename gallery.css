@@ -30,11 +30,14 @@
   scroll-snap-stop: always;
   margin: 10px;
   position: relative;
+  border-radius: 10px;
 }
 
 .gallery_scroller img {
-  object-fit: contain;
-  border-radius: 10px;
+  width: 80vw;
+  height: calc(80vw/16*9);
+  object-fit: cover;
+  /* margin: auto; */
 }
 
 .gallery_scroller div.colored_card {
