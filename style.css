@@ -17,6 +17,7 @@
   min-width:550px;
   width: 100%;
   height: 26vh;
+  max-height: 300px;
   z-index: 100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -50,7 +51,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 90%;
-  height: 18.5vh;
 }
 .header-column-l {
   flex: 45%;
@@ -223,7 +223,7 @@ p a:hover {
 .card img {
   object-fit: cover;
   object-position: top;
-  max-height: 35vh;
+  max-height: 400px;
 }
 
 .card-content {
@@ -231,6 +231,7 @@ p a:hover {
   grid-template-areas: "img text";
   grid-template-columns: 0.38fr 0.62fr;
   height: 35vh;
+  max-height: 500px;
 }
 .card-content img {
   object-fit: cover;
