@@ -230,6 +230,7 @@ p a:hover {
   display: grid;
   grid-template-areas: "img text";
   grid-template-columns: 0.38fr 0.62fr;
+  height: 35vh;
 }
 .card-content img {
   object-fit: cover;
@@ -240,21 +241,6 @@ p a:hover {
   overflow:hidden;
 }
 
-.card-columns {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  vertical-align: top;
-}
-.card-column-l {
-  flex: 38%;
-  vertical-align: top;
-}
-.card-column-r {
-  flex: 52%;
-  vertical-align: top;
-}
 
 
 
