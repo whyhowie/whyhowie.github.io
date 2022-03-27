@@ -9,6 +9,7 @@
 :root {
   --header-nav-max-height: 280px;
   --header-nav-min-height: 230px;
+  --header-nav-height: 230px;
 }
 
 /* HEADER STUFF */
@@ -16,17 +17,18 @@
   background-color: white;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -150px;
   min-width:550px;
   width: 100%;
-  height: clamp(var(--header-nav-min-height),26vh,var(--header-nav-max-height));
-  max-height: var(--header-nav-max-height);
+  height: var(--header-nav-height);
+  /* height: clamp(var(--header-nav-min-height),26vh,var(--header-nav-max-height)); */
+  /* max-height: var(--header-nav-max-height); */
   z-index: 100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
 }
 
-#header-nav:after {
+#header-nav::after {
   display: flex;
   content: "";
   max-width:1000px;
@@ -35,20 +37,22 @@
   background-repeat: repeat;
   background-size: 100px;
   opacity: 0.1;
-  position: fixed;
-  top: 0;
-  width: 95%;
+  position: relative;
+  top: calc(var(--header-nav-height)*-1);
+  /* top: calc(-150px-var(--header-nav-height)); */
+  width: 100%;
   margin:auto;
-  height: 25vh;
+  height: var(--header-nav-height);
+  /* height: clamp(var(--header-nav-min-height),25vh,var(--header-nav-max-height));
   max-height: calc(var(--header-nav-max-height) * 25/26);
-  min-height: calc(var(--header-nav-min-height) * 25/26);
-
+  min-height: calc(var(--header-nav-min-height) * 25/26); */
   z-index: -10;
   animation: bgLinear 10s linear infinite;
 }
 
+
 #content {
-  margin-top: 5vh;
+  margin-top: 20px;
 }
 
 
