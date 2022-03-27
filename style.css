@@ -222,6 +222,8 @@ p a:hover {
   display: block;
   overflow: hidden;
   /* border-radius: 10px; */
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
 }
 .card:hover {
   transform: scale(1.1);

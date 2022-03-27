@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   const galleries = document.querySelectorAll('.gallery');
   console.log(galleries.length);
 

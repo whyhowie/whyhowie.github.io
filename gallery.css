@@ -4,25 +4,37 @@
 }
 
 .gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   /* max-width: 800px; */
   padding: 0 10;
+  height: var(--gallery-height);
+  /* background-color: gray; */
+  scroll-snap-stop: always;
+  scroll-snap-align: top;
 }
 
 .gallery_scroller {
    /* snap proximity on horizontal axis, also add smooth scroll */
+  height: 80%;
+  margin:auto;
   scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: hidden;
-
   display: flex;
   align-items: center;
-  height: var(--gallery-height);
+  /* height: var(--gallery-height); */
   /* Enable Safari touch scrolling physics */
   -webkit-overflow-scrolling: touch;
+  /* cursor: grab; */
+  overflow: auto;
 }
-
+.gallery_scroller::-webkit-scrollbar {
+  display: none;
+}
 
 .gallery_scroller div {
    /* snap align center  */
@@ -40,11 +52,11 @@
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.gallery_scroller div:hover {
+/* .gallery_scroller div:hover {
   transform: scale(1.05);
   transition: transform 1s;
   z-index: 1;
-}
+} */
 
 .gallery_scroller img {
   width: 100%;
@@ -91,9 +103,8 @@
 
 .gallery .btn {
   position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
+  /* transform: translateY(-50%); */
 
   height: 60px;
   width: 30px;
