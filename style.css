@@ -62,6 +62,13 @@
   flex-wrap: wrap;
   width: 90%;
   overflow-y: hidden;
+  position: relative;
+  top: 0px;
+  /* background-color: red; */
+  margin: auto;
+  padding: 0% 5px;
+  border-bottom: 2px solid lightgray;
+  /* height: calc(var(--header-nav-height)-20px); */
 }
 .header-column-l {
   flex: 45%;
