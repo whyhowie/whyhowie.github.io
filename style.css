@@ -50,12 +50,61 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 90%;
+  height: 18.5vh;
 }
 .header-column-l {
   flex: 45%;
 }
 .header-column-r {
   flex: 45%;
+}
+
+
+
+
+ul.nav {
+  display: table;
+  list-style-type: none;
+  vertical-align: middle;
+  width: 80%;
+  overflow: inherit;
+  margin: auto;
+  padding: 0;
+  background-color: white;
+}
+
+ul.nav li {
+  display: table-cell;
+  justify-content: space-around;
+  text-align: center;
+  border-right: solid 2px lightgray;
+  height: 5vh;
+}
+ul.nav li:first-child {  border-left: solid 2px lightgray;}
+ul.nav li div {
+  display: inline-block;
+  padding: 1vh;
+}
+ul.nav li div{
+  width: 100px;
+  padding: .5vh;
+  text-decoration: none;
+  /* background-color: lightgray; */
+}
+ul.nav li.inactive div:hover {
+  transform: scale(1.2);
+  background-color: AliceBlue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: background-color 1s, box-shadow 1s, transform 1s;
+}
+ul.nav li.active {
+  background-color: lightgray;
+}
+ul.nav li.active div:hover {
+  transform: none;
+  background-color: none;
+  box-shadow: none;
+  transition: none;
 }
 
 
@@ -117,7 +166,6 @@ body {
 
 
 img {
-  vertical-align: top;
   overflow: hidden;
 }
 
@@ -152,49 +200,6 @@ p a:hover {
 }
 
 
-ul.nav {
-  display: table;
-  list-style-type: none;
-  vertical-align: middle;
-  width: 80%;
-  overflow: inherit;
-  margin: auto;
-  padding: 0;
-  background-color: white;
-}
-
-ul.nav li {
-  display: table-cell;
-  justify-content: space-around;
-  text-align: center;
-  border-right: solid 2px lightgray;
-}
-ul.nav li:first-child {  border-left: solid 2px lightgray;}
-ul.nav li div {
-  display: inline-block;
-  padding: 1vh;
-}
-ul.nav li div{
-  width: 100px;
-  padding: .5vh;
-  text-decoration: none;
-  /* background-color: lightgray; */
-}
-ul.nav li.inactive div:hover {
-  transform: scale(1.2);
-  background-color: AliceBlue;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: background-color 1s, box-shadow 1s, transform 1s;
-}
-ul.nav li.active {
-  background-color: lightgray;
-}
-ul.nav li.active div:hover {
-  transform: none;
-  background-color: none;
-  box-shadow: none;
-  transition: none;
-}
 
 
 
