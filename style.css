@@ -6,7 +6,9 @@
  font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
 }
 
-
+:root {
+  --header-nav-max-height: 300px
+}
 
 /* HEADER STUFF */
 #header-nav {
@@ -17,7 +19,7 @@
   min-width:550px;
   width: 100%;
   height: 26vh;
-  max-height: 300px;
+  max-height: var(--header-nav-max-height);
   z-index: 100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -32,11 +34,13 @@
   background-repeat: repeat;
   background-size: 100px;
   opacity: 0.1;
+  position: fixed;
   top: 0;
   width: 95%;
   margin:auto;
-  height: 18vh;
-  position: fixed;
+  height: 25vh;
+  max-height: calc(var(--header-nav-max-height) * 25/26);
+
   z-index: -10;
   animation: bgLinear 10s linear infinite;
 }
@@ -51,6 +55,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 90%;
+  overflow-y: hidden;
 }
 .header-column-l {
   flex: 45%;
@@ -63,8 +68,7 @@
 
 
 ul.nav {
-  display: block;
-  background-color: gray;
+  display: table;
   list-style-type: none;
   vertical-align: middle;
   width: 80%;
@@ -82,17 +86,18 @@ ul.nav li {
   text-align: center;
   border-right: solid 2px lightgray;
   height: 5vh;
+  width: 15vh;
+  max-width: 110px;
+  max-height: calc(var(--header-nav-max-height) * 5/26);
 }
 ul.nav li:first-child {  border-left: solid 2px lightgray;}
 ul.nav li div {
-  display: inline-block;
-  padding: 1vh;
+  padding: 5px;
+  margin: auto;
+  max-height: calc(var(--header-nav-max-height) * 3/26);
 }
-ul.nav li div{
-  width: 100px;
-  padding: .5vh;
+ul.nav li a {
   text-decoration: none;
-  /* background-color: lightgray; */
 }
 ul.nav li.inactive div:hover {
   transform: scale(1.2);
@@ -117,7 +122,7 @@ h1 {
   color: MidnightBlue;
 }
 h3 {
-  color: #222
+  color: #888
 }
 
 body {
