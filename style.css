@@ -68,7 +68,7 @@
   margin: auto;
   padding: 0% 5px;
   border-bottom: 2px solid lightgray;
-  /* height: calc(var(--header-nav-height)-20px); */
+  height: calc(var(--header-nav-height)-20);
 }
 .header-column-l {
   flex: 45%;
