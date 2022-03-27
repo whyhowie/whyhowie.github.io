@@ -1,4 +1,7 @@
 /* Currently Underdevelopment */
+@import "gallery.css";
+@import "Fontawesome/css/all.css";
+
 * {
  font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
 }
@@ -13,6 +16,7 @@
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 

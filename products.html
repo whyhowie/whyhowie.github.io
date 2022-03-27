@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-<html>
 <head>
   <title>Howie Wang - Portfolio - Product Design</title>
   <link rel="stylesheet" href="style.css">
-  <!-- <meta http-equiv="refresh" content="3; URL=https://howiewang.wixsite.com/portfolio" /> -->
+
   <meta name="viewport" content="width=device-width, maximum-scale=1">
 
   <script src="jquery-3.6.0.min.js"></script>
@@ -29,27 +28,24 @@
         <li class="inactive"><a href="index.html"><div>Home<br>主页</div></a></li>
         <li class="active"><div>Products<br>工</div></li>
         <li class="inactive"><a href="art.html"><div>Art<br>美</div></a></li>
-        <li class="inactive"><a href="#music"><div>Music<br>乐</div></a></li>
+        <li class="inactive"><a href="music.html"><div>Music<br>乐</div></a></li>
       </ul>
     </div>
     <hr>
   </div>
 
 
-
   <h2 style="text-align: center;"> Design Expedition </h2>
 
   <div class="card shadowed">
-    <!-- <p style="text-align: center; display: block;"> -->
-    <img src="graphic_elements/welcome_4K.jpg" width=100%>
+    <img src="assets/welcome_4K.jpg" width=100%>
   </div>
-  <!-- </p> -->
+
 
   <br>
 
   <div>
     <br>
-
     <div class="background-highlight"
       style="width:100%; margin:auto; padding: 5% 0;">
       <p align="center">This page is under construction. <br>
@@ -58,6 +54,39 @@
       </p>
     </div>
   </div>
+
+
+  <p>Below is a gallery where every item is the same size and centered. </p>
+
+  <div id="paginated_gallery" class="gallery">
+    <div class="gallery_scroller">
+      <div class="colored_card"> <p>1 </p></div>
+      <div class="colored_card"> <p>2 </p></div>
+      <div class="colored_card"> <p>3 </p></div>
+      <div class="colored_card"> <p>4 </p></div>
+      <div class="colored_card"> <p>5 </p></div>
+      <div class="colored_card"> <p>6 </p></div>
+      <div class="colored_card"> <p>7 </p></div>
+      <div class="colored_card"> <p>8 </p></div>
+      <div class="colored_card"> <p>9 </p></div>
+      <div class="colored_card"> <p>10</p> </div>
+      <div class="colored_card"> <p>11</p> </div>
+      <div class="colored_card"> <p>12</p> </div>
+      <div class="colored_card"> <p>13</p> </div>
+      <div class="colored_card"> <p>14</p> </div>
+      <div class="colored_card"> <p>15</p> </div>
+      <div class="colored_card"> <p>16</p> </div>
+      <div class="colored_card"> <p>17</p> </div>
+      <div class="colored_card"> <p>18</p> </div>
+      <div class="colored_card"> <p>19</p> </div>
+      <div class="colored_card"> <p>20</p> </div>
+    </div>
+    <div class="btn prev"><i class="fa-solid fa-chevron-left fa-1x"></i></div>
+    <i class="fa-solid fa-chevron-right fa-1x btn next"></i>
+  </div>
+
+
+  <script type="text/javascript" src="gallery.js"></script>
 
 
   <div id="footer"></div>
