@@ -257,12 +257,18 @@ ul.nav li.active div:hover {
 }
 
 
+.footer {
+  outline: 5px solid white;
+    height:5em; display:flex;
+    align-items: center; width:100%; margin: auto;
+}
 p.copyright {
   background-color: white;
   display: block;
   width: 40%;
   padding: 1em;
-  font-size: 50%;
+  font-size: 70%;
   text-align: center;
+  border-radius: 10px;
   margin:auto;
 }
