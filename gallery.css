@@ -1,6 +1,6 @@
 /* from https://web.dev/css-scroll-snap/ */
 :root {
-  --gallery-height: 400px;
+  --gallery-height: 420px;
 }
 
 .gallery {
@@ -69,7 +69,7 @@
 
 .gallery_scroller div.colored_card {
   min-width: 75%;
-  min-height: 95%;
+  max-height: 95%;
   border-radius: 10px;
   display: flex;
   justify-content: center;

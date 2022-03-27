@@ -124,7 +124,7 @@ h1 {
   color: MidnightBlue;
 }
 h3 {
-  color: #888
+  color: #555
 }
 
 body {
@@ -256,6 +256,14 @@ p a:hover {
 
 
 
+.project {
+  margin: -10px 0px 0px 0px;
+  padding-top: 2em;
+  background-color: white;
+}
+.project > h2,h3 {
+  text-align: center;
+}
 
 
 /* The element to apply the animation to */
