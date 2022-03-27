@@ -1,6 +1,6 @@
 /* from https://web.dev/css-scroll-snap/ */
 :root {
-  --gallery-height: 40vh;
+  --gallery-height: 50vmax;
 }
 
 .gallery {
@@ -31,12 +31,18 @@
   margin: 10px;
   position: relative;
   border-radius: 10px;
+  background-color: red;
+  /* min-width: var(--gallery-height); */
+  min-width: 50vmin;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .gallery_scroller img {
-  width: 80vw;
-  height: calc(80vw/16*9);
+  width: 100%;
   object-fit: cover;
+  object-position: center;
+  /* opacity:0; */
   /* margin: auto; */
 }
 
