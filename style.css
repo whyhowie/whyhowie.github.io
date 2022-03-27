@@ -232,7 +232,7 @@ p a:hover {
 .card img {
   object-fit: cover;
   object-position: top;
-  max-height: 400px;
+  max-height: min(400px, 35vh);
 }
 .card p {
   font-size: clamp(10px, 1.5vw, 15px);
@@ -242,7 +242,7 @@ p a:hover {
   display: grid;
   grid-template-areas: "img text";
   grid-template-columns: 0.38fr 0.62fr;
-  height: 20em;
+  /* height: 20em; */
   max-height: 20em;
   overflow: hidden;
 }
@@ -250,25 +250,26 @@ p a:hover {
   object-fit: cover;
   object-position: center;
   width: 100%;
-  height:40em;
+  height:30em;
   margin-bottom:0;
 }
 
 
 
 
-/* The animation code */
-@keyframes background-highlight {
-  0% {background-color: AliceBlue;}
-  50% {background-color: lightgray;}
-  100% {background-color: AliceBlue;}
-}
 
 /* The element to apply the animation to */
 .background-highlight {
   animation-name: background-highlight;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  width:100%; margin:auto; padding: 10px 0;
+}
+/* The animation code */
+@keyframes background-highlight {
+  0% {background-color: AliceBlue;}
+  50% {background-color: lightgray;}
+  100% {background-color: AliceBlue;}
 }
 
 
