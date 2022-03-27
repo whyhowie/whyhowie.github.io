@@ -11,17 +11,18 @@
 /* HEADER STUFF */
 #header-nav {
   background-color: white;
-  margin: auto;
   position: -webkit-sticky;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: sticky;
+  top: 1%;
+  min-width:550px;
+  width: 90%;
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
 #content {
-  margin-top: 18em;
+  margin-top: 2em;
 }
 
 
