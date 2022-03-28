@@ -29,7 +29,7 @@ html {
   top: -150px;
   min-width:550px;
   width: 100%;
-  height: var(--header-nav-height);
+  height: calc(var(--header-nav-height) - 10px);
   /* height: clamp(var(--header-nav-min-height),26vh,var(--header-nav-max-height)); */
   /* max-height: var(--header-nav-max-height); */
   z-index: 100;
@@ -47,11 +47,11 @@ html {
   background-size: 100px;
   opacity: 0.1;
   position: relative;
-  top: calc((230px*-1));
+  top: calc((230px * -1));
   /* top: calc(-150px-var(--header-nav-height)); */
   width: 100%;
   margin:auto;
-  height: var(--header-nav-height);
+  height: calc(var(--header-nav-height) - 5px);
   /* height: clamp(var(--header-nav-min-height),25vh,var(--header-nav-max-height));
   max-height: calc(var(--header-nav-max-height) * 25/26);
   min-height: calc(var(--header-nav-min-height) * 25/26); */
