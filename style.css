@@ -56,7 +56,8 @@ html {
 
 
 #content {
-  margin-top: 20px;
+  padding-top: 80px;
+  margin: -30px 0px 0px 0px;
 }
 
 
@@ -250,6 +251,7 @@ p a:hover {
   /* border-radius: 10px; */
   scroll-snap-stop: always;
   scroll-snap-align: center;
+  background-color: white;
 }
 .card:hover {
   transform: scale(1.1);
@@ -272,26 +274,38 @@ p a:hover {
 } */
 
 .card-content {
-  display: grid;
+  /* display: grid;
   grid-template-areas: "img text";
-  grid-template-columns: 0.38fr 0.62fr;
+  grid-auto-columns: auto; */
+  /* grid-template-columns: 0.38fr 0.62fr; */
   /* height: 20em; */
-  height: -moz-fit-content;
+  /* height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
+  overflow: hidden; */
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: AliceBlue;
 }
-.card-content > img {
-  display: block;
-  object-fit: cover;
-  overflow: auto;
-  width: 100%;
+.card-content img {
+  /* object-fit: cover; */
+  /* overflow: auto; */
+  min-width:40%;
+  height: 100%;
+  /* min-height: 100%; */
+  /* width: 100%; */
   object-position: center;
   /* max-height: 120%; */
   /* width: 100%; */
   /* height:60em; */
   /* margin-bottom:0; */
 }
-
+.card-content .card-text {
+  color:black;
+  padding:1.25em;
+  text-align: left;
+}
 
 
 .project {
