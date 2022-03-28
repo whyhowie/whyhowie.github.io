@@ -256,8 +256,8 @@ p a:hover {
   display: block;
   overflow: hidden;
   /* border-radius: 10px; */
-  scroll-snap-stop: always;
-  scroll-snap-align: center;
+  /* scroll-snap-stop: always;
+  scroll-snap-align: center; */
   background-color: white;
 }
 .card:hover {
@@ -345,7 +345,7 @@ p a:hover {
   border-top: 10px solid white;
     height:5em; display:flex;
     align-items: center; width:100%; margin: auto;
-    /* animation: bgLinear 10s linear infinite; */
+    animation: bgLinear 10s linear infinite;
     will-change: auto;
     z-index: -2;
 }

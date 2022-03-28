@@ -12,8 +12,8 @@
   padding: 0 10;
   height: var(--gallery-height);
   /* background-color: gray; */
-  scroll-snap-stop: always;
-  scroll-snap-align: top;
+  /* scroll-snap-stop: always;
+  scroll-snap-align: top; */
 }
 
 .gallery_scroller {
