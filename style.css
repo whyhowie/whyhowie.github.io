@@ -58,6 +58,7 @@ html {
 #content {
   padding-top: 80px;
   margin: -30px 0px 0px 0px;
+  z-index: -10;
 }
 
 
@@ -168,7 +169,7 @@ body {
   outline: 10px solid lightgray;
   overflow-y: auto;
 }
-/* body:after {
+body:after {
   display: flex;
   content: "";
   max-width:1000px;
@@ -183,8 +184,8 @@ body {
   height: 100%;
   position: fixed;
   z-index: -1;
-  animation: bgLinear 10s linear infinite;
-} */
+  /* animation: bgLinear 10s linear infinite reverse; */
+}
 
 /* :lang(zh-Hant) 	{font-family: Kai,KaiTi,serif;}
 :lang(zh-Hans) 	{font-family: STSong,SimSun,serif;} */
@@ -329,7 +330,7 @@ p a:hover {
 /* The animation code */
 @keyframes background-highlight {
   0% {background-color: #ddd;}
-  50% {background-color: #ccc;}
+  50% {background-color: #eee;}
   100% {background-color: #ddd;}
 }
 
@@ -338,7 +339,7 @@ p a:hover {
   outline: 5px solid white;
     height:5em; display:flex;
     align-items: center; width:100%; margin: auto;
-    animation: bgLinear 10s linear infinite reverse;
+    animation: bgLinear 10s linear infinite;
 }
 p.copyright {
   background-color: white;
