@@ -35,13 +35,14 @@ html {
   z-index: 100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
+  overflow: hidden;
 }
 
 #header-nav:after {
   display: flex;
   content: "";
-  max-width:1000px;
-  min-width:550px;
+  /* max-width:1000px;
+  min-width:550px; */
   background: url(assets/Pattern.svg);
   background-repeat: repeat;
   background-size: 100px;
@@ -49,14 +50,14 @@ html {
   position: relative;
   top: calc((230px * -1));
   /* top: calc(-150px-var(--header-nav-height)); */
-  width: 100%;
+  width: 500%;
   margin:auto;
   height: calc(var(--header-nav-height) - 5px);
   /* height: clamp(var(--header-nav-min-height),25vh,var(--header-nav-max-height));
   max-height: calc(var(--header-nav-max-height) * 25/26);
   min-height: calc(var(--header-nav-min-height) * 25/26); */
-  z-index: -3;
-  animation: bgLinear 1s linear infinite;
+  z-index: -10;
+  animation: bgLinear 10s linear infinite;
   will-change: auto;
 }
 
@@ -185,7 +186,7 @@ body:after {
   background-size: 100px;
   opacity: 0.05;
   top: 0;
-  width: 100%;
+  width: 95%;
   margin:auto;
   height: 100%;
   position: fixed;
@@ -200,11 +201,14 @@ body:after {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-@keyframes bgLinear {
+/* @keyframes bgLinear {
   from {background-position: 0 0;}
   to {background-position: 100px 0;}
+} */
+@keyframes bgLinear {
+  from {transform: translateX(-1000px);}
+  to {transform: translateX(-900px);}
 }
-
 
 
 
@@ -345,7 +349,7 @@ p a:hover {
   border-top: 10px solid white;
     height:5em; display:flex;
     align-items: center; width:100%; margin: auto;
-    animation: bgLinear 1s linear infinite;
+    /* animation: bgLinear 1s linear infinite; */
     will-change: auto;
     z-index: -2;
 }
