@@ -137,7 +137,11 @@ h1 {
   font-size: 200%;
   color: MidnightBlue;
 }
+h2 {
+  font-size: 1.2em;
+}
 h3 {
+  font-size: 1em;
   color: #555
 }
 
@@ -250,29 +254,35 @@ p a:hover {
   max-height: min(400px, 35vh);
 }
 .card p {
-  font-size: clamp(10px, 1.5vw, 15px);
+  font-size: 0.75em;
 }
 .card h2 {
-  font-size: 1.2em;
+  margin-block-start: 0;
+  /* font-size: 1.2em; */
 }
-.card h3 {
+/* .card h3 {
   font-size: 1em;
-}
+} */
 
 .card-content {
   display: grid;
   grid-template-areas: "img text";
   grid-template-columns: 0.38fr 0.62fr;
   /* height: 20em; */
-  max-height: 20em;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: hidden;
 }
-.card-content img {
+.card-content > img {
+  display: block;
   object-fit: cover;
-  object-position: center;
+  overflow: auto;
   width: 100%;
-  height:60em;
-  margin-bottom:0;
+  object-position: center;
+  /* max-height: 120%; */
+  /* width: 100%; */
+  /* height:60em; */
+  /* margin-bottom:0; */
 }
 
 
@@ -283,6 +293,7 @@ p a:hover {
   background-color: white;
 }
 .project > h2,h3 {
+  margin-block-start: 0;
   text-align: center;
 }
 
