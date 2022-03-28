@@ -2,6 +2,10 @@
 @import "gallery.css";
 @import "Fontawesome/css/all.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
  font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
 }
@@ -120,16 +124,19 @@ ul.nav li.inactive div:hover {
   background-color: AliceBlue;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: background-color 1s, box-shadow 1s, transform 1s;
+  z-index: 8;
 }
-ul.nav li.active {
+ul.nav li.active div {
+  height: 110%;
   background-color: lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: auto;
 }
-ul.nav li.active div:hover {
-  transform: none;
+/* ul.nav li.active div:hover {
   background-color: none;
   box-shadow: none;
   transition: none;
-}
+} */
 
 
 
