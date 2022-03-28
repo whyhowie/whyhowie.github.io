@@ -8,13 +8,8 @@
   <meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1">
 
   <script src="jquery-3.6.0.min.js"></script>
-  <!-- Use jQuery to add header -->
-  <script>
-  $(function(){
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
-  });
-  </script>
+  <!-- Use jQuery to add header and footer-->
+
 
 </head>
 
@@ -75,6 +70,11 @@
   <br>
   <div id="footer"></div>
 </div>
-
+<script>
+$(function(){
+  $("#header").load("header.html");
+  $("#footer").load("footer.html");
+});
+</script>
 </body>
 </html>
