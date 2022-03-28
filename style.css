@@ -131,7 +131,7 @@ ul.nav li.inactive div:hover {
   transform: scale(1.2);
   background-color: AliceBlue;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: background-color 1s, box-shadow 1s, transform 1s;
+  transition: background-color .3s, box-shadow .3s, transform .3s;
   z-index: 8;
 }
 ul.nav li.active div {
@@ -261,8 +261,8 @@ p a:hover {
   background-color: white;
 }
 .card:hover {
-  transform: scale(1.1);
-  transition: background-color 1s, transform 1s;
+  transform: scale(1.02);
+  transition: background-color .5s, transform .5s;
 }
 .card img {
   object-fit: cover;
