@@ -328,9 +328,9 @@ p a:hover {
 }
 /* The animation code */
 @keyframes background-highlight {
-  0% {background-color: AliceBlue;}
-  50% {background-color: lightgray;}
-  100% {background-color: AliceBlue;}
+  0% {background-color: #ddd;}
+  50% {background-color: #ccc;}
+  100% {background-color: #ddd;}
 }
 
 
@@ -338,6 +338,7 @@ p a:hover {
   outline: 5px solid white;
     height:5em; display:flex;
     align-items: center; width:100%; margin: auto;
+    animation: bgLinear 10s linear infinite reverse;
 }
 p.copyright {
   background-color: white;
