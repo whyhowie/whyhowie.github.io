@@ -97,11 +97,12 @@ ul.nav {
 }
 ul.nav li {
   display: table-cell;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   text-align: center;
+  align-items: middle;
   border-right: solid 2px lightgray;
   /* height: 80%; */
-  width: 20%;
+  width: 15%;
   max-width: 110px;
   /* max-height: calc(var(--header-nav-max-height) * 5/26); */
 }
