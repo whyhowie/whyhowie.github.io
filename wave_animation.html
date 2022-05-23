@@ -7,6 +7,32 @@
 <link rel="stylesheet" href="Fontawesome/css/all.css">
 <!-- <link rel="stylesheet" href="style.css"> -->
 <style media="screen">
+  #test {
+    display: flex;
+    /* max-width:1000px;
+    min-width:550px; */
+    background: url(http://howiewang.me/assets/Pattern.svg);
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* top: calc(-150px-var(--header-nav-height)); */
+    width: 500%;
+    margin: auto;
+    height: 100vh;
+    /* height: clamp(var(--header-nav-min-height),25vh,var(--header-nav-max-height));
+    max-height: calc(var(--header-nav-max-height) * 25/26);
+    min-height: calc(var(--header-nav-min-height) * 25/26); */
+    z-index: -10;
+    animation: bgLinear 10s linear infinite;
+    will-change: auto;
+  }
+  @keyframes bgLinear {
+    from {transform: translateX(-1000px);}
+    to {transform: translateX(-900px);}
+  }
 </style>
 </head>
 
