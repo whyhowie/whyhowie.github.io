@@ -6,30 +6,30 @@ $(document).ready(function() {
   let enlargedImg = []
 
   // Add buttons
-  $("<i class='fa-solid fa-chevron-left fa-lg btn prev'></i>").appendTo('.gallery_scroller')
-  $("<i class='fa-solid fa-chevron-right fa-lg btn next'></i>").appendTo('.gallery_scroller')
+  $("<i class='fa-solid fa-chevron-left fa-lg btn prev'></i>").appendTo('.gallery-scroller')
+  $("<i class='fa-solid fa-chevron-right fa-lg btn next'></i>").appendTo('.gallery-scroller')
 
 
   galleries.forEach( gallery => {
-    let gallery_scroller = gallery.querySelector('.gallery_scroller')
+    let galleryScroller = gallery.querySelector('.gallery-scroller')
     
     // Button behavior
     gallery.querySelector('.btn.next').addEventListener('click', scrollToNextPage);
     gallery.querySelector('.btn.prev').addEventListener('click', scrollToPrevPage);
 
-    gallery_scroller.currentSlide = 0;
+    // galleryScroller.currentSlide = 0;
 
-    function scrollToNextPage(event) {
-      if (gallery_scroller.currentSlide < gallery_scroller.children.length) {
-        ++gallery_scroller.currentSlide
-      }
-      gallery_scroller.children[gallery_scroller.currentSlide].scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+    function scrollToNextPage(event) { 
+      let scrollWidth = galleryScroller.children[0].clientWidth
+      galleryScroller.scrollLeft += scrollWidth
     }
     function scrollToPrevPage(event) {
-      if (gallery_scroller.currentSlide > 0) {
-        --gallery_scroller.currentSlide
-      }
-      gallery_scroller.children[gallery_scroller.currentSlide].scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+      let scrollWidth = galleryScroller.children[0].clientWidth
+      galleryScroller.scrollLeft -= scrollWidth
+      // if (galleryScroller.currentSlide > 0) {
+      //   --galleryScroller.currentSlide
+      // }
+      // galleryScroller.children[galleryScroller.currentSlide].scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
     }
   })
 
@@ -42,11 +42,14 @@ $(document).ready(function() {
 $('body').append(`<div id="larger-image"></div>
   <div id="image-overlay"></div>`)
 
+// Fade-in
 $('.gallery img').click(function () {
-  console.log($(this).attr('src'))
+  var projectTitle = $(this).closest(".project").children("h2")[0].textContent
   var $img = $(this);
-  $('#larger-image').html($img.clone()).add($('#image-overlay')).fadeIn();
+  $('#larger-image').html($img.clone().add(`<p id="project-image-title">${projectTitle}</p>`)).add($('#image-overlay')).fadeIn();
 });
+
+// Fade-out
 $('#larger-image').add($('#image-overlay')).click(function () {
   $('#larger-image').add($('#image-overlay')).fadeOut(
     function () {
