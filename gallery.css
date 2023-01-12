@@ -10,10 +10,6 @@
   position: relative;
   /* max-width: 800px; */
   padding-bottom: 2rem;
-  /* height: var(--gallery-height); */
-  /* background-color: gray; */
-  /* scroll-snap-stop: always;
-  scroll-snap-align: top; */
 }
 
 .gallery-scroller {

@@ -1,6 +1,7 @@
 /* Currently Underdevelopment */
 @import "gallery.css";
 @import "Fontawesome/css/all.css";
+@import "photo-wall.css";
 
 * {
   font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
@@ -13,6 +14,12 @@
   --page-min-width: 550px;
   --header-logo-size: calc(var(--header-font-size)*3.2)
 }
+
+/* html {
+  height: 100vh;
+  overflow-y: hidden;
+} */
+/* need this for scroll snapping */
 
 html, body, body:after {
   scroll-behavior: smooth;
@@ -76,9 +83,9 @@ body:after {
   position: -webkit-sticky;
   position: sticky;
   top: -10rem;
-  min-width:550px;
+  min-width: 550px;
   width: 100%;
-  height: calc(var(--header-nav-height) - 10px);
+  height: calc(var(--header-nav-height) - 1rem);
   z-index: 100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -123,11 +130,12 @@ body:after {
 }
 .header-column-r {
   flex: 45%;
+  text-align:right;
 }
 
 
 
-
+/* Navigation bar */
 ul.nav {
   display: table;
   list-style-type: none;
@@ -278,7 +286,7 @@ p a:hover {
 }
 .card-content img {
   object-fit: cover;
-  overflow: auto;
+  overflow: hidden;
   width: 60em;
   height: 25em;
   object-position: center;
@@ -288,6 +296,14 @@ p a:hover {
   padding:3rem;
   text-align: left;
 }
+
+.card-content .banner-image {
+  background-color: red;
+  position: relative;
+  object-fit: cover;
+  object-position: left;
+}
+
 @media screen and (max-width: 800px) {
  .card-content {
     display: block;
@@ -301,18 +317,25 @@ p a:hover {
  }
 }
 
-/* .projects {
-  scroll-snap-points-y: repeat(100vh);
+
+
+/* body {
+  height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding: 40px;
+  scroll-snap-type: y proximity;
 } */
+
 .project {
-  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: end;
   margin: -10px 0px 0px 0px;
   padding-top: 2em;
   background-color: white;
 }
+
 .project > h2 {
   font-size: 150%;
 }
@@ -325,6 +348,8 @@ p a:hover {
   text-align: left;
   width: 80%;
   margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
@@ -352,22 +377,22 @@ p a:hover {
 
 
 
-
 .footer {
   border-top: 10px solid white;
-    height:5em; display:flex;
-    align-items: center; width:100%; margin: auto;
-    /* animation: bgLinear 1s linear infinite; */
-    will-change: auto;
-    z-index: -2;
+  height:5em; display:flex;
+  align-items: center; width:100%; margin: auto;
+  /* animation: bgLinear 1s linear infinite; */
+  will-change: auto;
+  z-index: -2;
+  scroll-snap-align: bottom;
 }
 p.copyright {
   background-color: white;
   display: block;
   width: 40%;
-  padding: 1em;
-  font-size: 70%;
+  padding: 0.5em;
+  font-size: 80%;
   text-align: center;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin:auto;
 }
