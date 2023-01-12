@@ -1,0 +1,9 @@
+.photo-wall {
+    column-count: 3;
+}
+
+.photo-wall img {
+    width: 300px;
+    display: inline-block;
+    object-fit: scale-down;
+}
