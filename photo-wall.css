@@ -106,7 +106,7 @@
 /* Fade out on sides */
 .photo-wall-row {
   
-    mask-image: linear-gradient(transparent,
+    mask-image: linear-gradient( to right, transparent,
         white 5%,
         white 95%,
         transparent 100%);
@@ -151,6 +151,18 @@
 
     padding: 0.5rem;
     margin-bottom: 4rem;
+}
+
+
+/* Fade out at bottom */
+.photo-wall-grid {
+  
+    mask-image: linear-gradient(white,
+        white 95%,
+        transparent 100%);
+    -webkit-mask-image: linear-gradient(white,
+        white 95%,
+        transparent 100%);
 }
 
 .photo-wall-grid div {
