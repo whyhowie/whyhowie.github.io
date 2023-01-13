@@ -1,8 +1,11 @@
+@import 'img-lightbox.css';
+
+/* Vertical photo wall */
 .photo-wall {
     width: 90%;
     height: 50rem;
     overflow-y: scroll;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     padding: 0.5rem;
 }
 
@@ -20,10 +23,11 @@
 
 .photo-wall-columns div img {
     box-sizing: border-box;
-    /* height: 15rem; */
-    background-color: white;
+
     width: 100%;
-    padding: 0.5rem 0.5rem;
+    
+    border: 0.25rem solid white;
+
     margin: 0.25rem 0;
 }
 
@@ -56,3 +60,139 @@
         column-count:         1;
     }
 } */
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+
+/* Horizontal photo wall (still developing) */
+
+/* One row for now */
+.photo-wall-horizontal-loop {
+    position: relative;
+    width: 90%;
+    margin-bottom: 4rem;
+
+    box-sizing: border-box;
+    /* border: solid 10px lightcoral; */
+    /* border-radius: 1rem; */
+    box-shadow: inset 0px 0px 20px #aaa;
+    text-align: left;
+}
+
+.photo-wall-row {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    
+    align-items: center;
+    height: 34rem;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    margin: 0 1rem;
+
+}
+.photo-wall-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* Fade out on sides */
+.photo-wall-row {
+  
+    mask-image: linear-gradient(transparent,
+        white 5%,
+        white 95%,
+        transparent 100%);
+    -webkit-mask-image: linear-gradient( to right,transparent,
+        white 5%,
+        white 95%,
+        transparent 100%);
+}
+
+
+.photo-wall-row div img {
+    box-sizing: border-box;
+    height: 30rem;
+    border: 0.25rem solid white;
+    margin: 1rem 0.5rem;
+}
+
+.photo-wall-row div img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color .5s, transform .5s;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+/* Grid photo wall */
+.photo-wall-grid {
+    width: 90%;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 12rem;
+
+    height: 50rem;
+    overflow-y: scroll;
+
+    padding: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.photo-wall-grid div {
+    box-sizing: border-box;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    
+    border: solid 0.25rem white;
+}
+
+.photo-wall-grid img {
+    width: 120%;
+    height: 120%;
+    /* max-height: 15rem; */
+    object-fit: cover;
+    object-position: 50% 61.8%;
+}
+
+
+.photo-wall-grid div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color .5s, transform .5s;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .photo-wall-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout */
+.photo-wall-grid div:first-child {
+    grid-area: main;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.photo-wall-grid div:first-child img {
+    width: 120%;
+    height: 120%;
+    object-position: 25% 61.8%;
+}

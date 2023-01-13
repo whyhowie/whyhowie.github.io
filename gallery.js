@@ -17,7 +17,6 @@ $(document).ready(function() {
     gallery.querySelector('.btn.next').addEventListener('click', scrollToNextPage);
     gallery.querySelector('.btn.prev').addEventListener('click', scrollToPrevPage);
 
-    // galleryScroller.currentSlide = 0;
 
     function scrollToNextPage(event) { 
       let scrollWidth = galleryScroller.children[0].clientWidth
@@ -26,10 +25,6 @@ $(document).ready(function() {
     function scrollToPrevPage(event) {
       let scrollWidth = galleryScroller.children[0].clientWidth
       galleryScroller.scrollLeft -= scrollWidth
-      // if (galleryScroller.currentSlide > 0) {
-      //   --galleryScroller.currentSlide
-      // }
-      // galleryScroller.children[galleryScroller.currentSlide].scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
     }
   })
 

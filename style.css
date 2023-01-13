@@ -98,14 +98,14 @@ body:after {
   background: url(assets/Pattern.svg);
   background-repeat: repeat;
   background-size: var(--header-logo-size);
-  opacity: 0.1;
+  opacity: 0.2;
   position: relative;
   top: calc((var(--header-nav-height) * -1));
   width: 500%;
   margin:auto;
   height: calc(var(--header-nav-height));
   z-index: -10;
-  animation: bgLinear 2s linear infinite;
+  animation: bgLinear 2.5s linear infinite;
   will-change: auto;
 }
 
@@ -319,11 +319,6 @@ a:hover {
 
 
 
-/* body {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-} */
 
 .project {
   display: flex;
@@ -353,7 +348,27 @@ a:hover {
 }
 
 
+.project-halves {
+  display: flex;
+  flex-direction: row;
+}
+.project.left-half, .project.right-half {
+  text-align: center;
+  width: 50%;
+  /* height: 50rem; */
+}
 
+.single-photo {
+  width: 80%;
+  margin-bottom: 4rem;
+  margin-top: 0;
+}
+
+.single-photo img {
+  width: 100%;
+  /* max-height: 25rem;
+  object-fit: scale-down; */
+}
 
 
 
