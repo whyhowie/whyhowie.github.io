@@ -75,7 +75,7 @@ const autoPageScroll = function (context, status=true) {
   if (status && !overlayFlag) {
     context.pageScrollInterval = setInterval(function () {
       context.scrollBy(1,0);
-    }, 10);
+    }, 5);
   }
 }
 
@@ -96,7 +96,6 @@ horizontalPhotoWalls.forEach( context => {
 
   function cloneElements(n) {
     // Clone the first n elements and append them
-    console.log(imgElements.length)
     let imgElementsToClone = imgElements.slice(0,n)
     imgElementsToClone.forEach( (imgElement) => {
       let clonedImgElement = imgElement.cloneNode(true)

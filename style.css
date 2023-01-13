@@ -15,11 +15,6 @@
   --header-logo-size: calc(var(--header-font-size)*3.2)
 }
 
-/* html {
-  height: 100vh;
-  overflow-y: hidden;
-} */
-/* need this for scroll snapping */
 
 html, body, body:after {
   scroll-behavior: smooth;
