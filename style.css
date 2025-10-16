@@ -15,7 +15,7 @@
   --page-min-width: 550px;
   --header-logo-size: calc(var(--header-font-size)*2.5);
   --nav-height: 5rem;
-  --header-nav-height: calc(var(--header-logo-size)*2 + var(--nav-height)*1.5);
+  --header-nav-height: calc(var(--header-logo-size)*2 + var(--nav-height)*1.35);
 }
 
 
@@ -149,11 +149,16 @@ body:after {
 
 /* ----------------------HEADER STUFF---------------------- */
 /* Overall header and navigation container */
+#header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -13rem;
+    z-index: 10000;
+    /* margin-bottom: 1rem; */
+}
+
 #header-nav {
   /* background-color: floralwhite; */
-  position: -webkit-sticky;
-  position: sticky;
-  top: -13rem;
   min-width: 550px;
   width: 97.5%;
   height: calc(var(--header-nav-height) - 1rem);
@@ -169,8 +174,6 @@ body:after {
   border-radius: 1rem;
 }
   
-
-
 #header-nav:after {
   display: flex;
   content: "";
