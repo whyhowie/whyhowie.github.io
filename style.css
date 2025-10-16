@@ -446,6 +446,7 @@ body:after {
   /* position: absolute; */
   /* bottom: 0; */
   width: 97.5%;
+  max-width: var(--page-max-width);
   z-index: 50;
   margin: auto;
   background: 
