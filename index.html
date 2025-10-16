@@ -25,6 +25,11 @@
         <feComposite operator="in" in2="SourceGraphic" in="blurredNoise" result="blend" />
         <feBlend mode="multiply" in="SourceGraphic" in2="blend" />
       </filter>
+      <!-- Soft Wave filter -->
+      <filter id="softWave">
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="wave" />
+        <feDisplacementMap in="SourceGraphic" in2="wave" scale="3" />
+      </filter>
     </defs>
   </svg>
 
@@ -60,6 +65,7 @@
         </div>
       </div>
     </div>
+
 
     <br>
 
