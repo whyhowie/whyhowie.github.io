@@ -346,7 +346,7 @@ body:after {
   height: 100%;
   flex: 4;
   object-position: center;
-  filter:  url(#grainy) brightness(110%) saturate(5);
+  filter:  url(#grainy) brightness(120%) saturate(3) hue-rotate(-5deg) contrast(0.9);
   border-right: solid 4px rgba(0, 0, 0, 0.2);
   border-bottom: none;
 }
