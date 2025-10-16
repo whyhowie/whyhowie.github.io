@@ -148,7 +148,7 @@ body:after {
   position: sticky;
   top: -13rem;
   min-width: 550px;
-  width: 100%;
+  width: 97.5%;
   height: calc(var(--header-nav-height) - 1rem);
   z-index: 100;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1); */
@@ -159,7 +159,7 @@ body:after {
   background: 
 	  linear-gradient(320deg, rgba(0,0,200,0.3), floralwhite),
     floralwhite;
-  /* border-radius: 1rem; */
+  border-radius: 1rem;
 }
   
 
@@ -198,15 +198,26 @@ body:after {
   text-align: left;
 }
 .header-column-r {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   flex: 45%;
   text-align: right;
 }
 .header-logo {
   height: var(--header-logo-size);
   border: 2px solid #555;
+  box-sizing: border-box; /*ensure sizing*/
 }
 .header-social {
-  margin: 0.1em 0.11em;
+  width: var(--header-logo-size);
+  padding: 0 0.25rem;
+  /* background-color: rgba(255, 255, 255, 0.75); */
+  margin: 0.25rem 0;
+  box-sizing: border-box; /*ensure sizing*/
+  border: 2px solid #555;
+  background: 
+	  linear-gradient(90deg, rgba(0,0,200,0.1), floralwhite);
 }
 
 
@@ -291,7 +302,7 @@ body:after {
 
 /* ----------------------LARGE CARDS---------------------- */
 .card {
-  width:100%;
+  width: 97.5%;
   margin: auto;
   display: block;
   overflow: hide;
@@ -324,8 +335,9 @@ body:after {
   width: 60rem;
   height: 30rem;
   object-position: center;
-  filter:  url(#grainy);
-  box-shadow: 4px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  filter:  url(#grainy) brightness(110%);
+  border-right: solid 4px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 .card-content .card-text {
   color:black;
@@ -351,7 +363,8 @@ body:after {
     width: 100%;
     min-height: 20rem;
     max-height: 30rem;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    border-right: none;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.2);
  }
 }
 
@@ -430,23 +443,22 @@ body:after {
 /* ----------------------FOOTER STUFF---------------------- */
 
 .footer-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: var(--page-max-width);
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 97.5%;
   z-index: 50;
   margin: auto;
   background: 
-	  linear-gradient(140deg, rgba(0,0,200,0.3), rgba(0,0,0,0.3));
-  /* border-radius: 1rem; */
+	  linear-gradient(140deg, rgba(0,0,200,0.3), rgba(0,0,0,0.1));
+  border-radius: 1rem;
+  border-top: 2px solid #555;
   overflow: hidden;
 }
 .footer {
-  border-top: 2px solid #555;
   height:5rem; 
   display:flex;
   align-items: center; 
-  width:100%; 
+  /* width:97.5%;  */
   margin: auto;
 }
 div.copyright {
