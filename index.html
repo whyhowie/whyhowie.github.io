@@ -49,8 +49,10 @@
 
     <div class="shadowed card grainy">
       <div class="card-content">
+        
         <img src="assets/StopSign_cropped_4K.jpg" style="object-position: top;">
         <div class="card-text">
+          <canvas class="globe-canvas"></canvas>
           <!-- <div class="gradient-rect" style="--start-color: rgba(0,0,0,0); --end-color: rgba(0,0,0,0.5);"></div> -->
           <h2 class="text-tight-2">Engineered with a <br>good pinch of Art.</h2>
           <div class="gradient-rect" style="--start-color: rgba(50,205,50,0.5); --end-color: rgba(0,0,0,0);"></div>
@@ -67,8 +69,11 @@
     </div>
 
 
-    <br>
 
+
+  <script type="text/javascript" src="draw-globe.js"></script>
+
+    <br>
 
 
     <div id="footer"></div>
@@ -79,16 +84,15 @@
 
 
 <script>
-$(function(){
-  $("#header").load("header.html", function () {
-  // This runs *after* header.html has been loaded
-  const currentPage = "index"; // set manually per page
-  $(`.nav-item[page="${currentPage}"]`).removeClass("inactive");
-  $(`.nav-item[page="${currentPage}"]`).addClass("active");
-});
-  $("#footer").load("footer.html");
-});
-
+  $(function(){
+    $("#header").load("header.html", function () {
+    // This runs *after* header.html has been loaded
+    const currentPage = "index"; // set manually per page
+    $(`.nav-item[page="${currentPage}"]`).removeClass("inactive");
+    $(`.nav-item[page="${currentPage}"]`).addClass("active");
+  });
+    $("#footer").load("footer.html");
+  });
 
 </script>
 
