@@ -85,7 +85,12 @@
 
 <script>
 $(function(){
-  $("#header").load("header.html");
+  $("#header").load("header.html", function () {
+  // This runs *after* header.html has been loaded
+  const currentPage = "music"; // set manually per page
+  $(`.nav-item[page="${currentPage}"]`).removeClass("inactive");
+  $(`.nav-item[page="${currentPage}"]`).addClass("active");
+});
   $("#footer").load("footer.html");
 });
 </script>
