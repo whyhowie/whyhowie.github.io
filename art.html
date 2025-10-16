@@ -9,6 +9,23 @@
   <script src="jquery-3.6.0.min.js"></script>
   <!-- Use jQuery to add header -->
 
+  <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <!-- Grain filter -->
+      <filter id="grainy">
+        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" result="noise" />
+        <feColorMatrix type="matrix" 
+          values="0 0 0 0 0,
+            0 0 0 0 0,
+            0 0 0 0 0,
+            0 0 0 0.2 0"
+          in="noise" result="softNoise" />
+        <feGaussianBlur in="softNoise" stdDeviation="0.2" result="blurredNoise" />
+        <feComposite operator="in" in2="SourceGraphic" in="blurredNoise" result="blend" />
+        <feBlend mode="multiply" in="SourceGraphic" in2="blend" />
+      </filter>
+    </defs>
+  </svg>
 
 </head>
 
