@@ -1,0 +1,146 @@
+/* Container holding all cards */
+#projects-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Individual card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: 
+	  linear-gradient(90deg, rgba(200,200,255,1), rgba(255,255,255,0.8));
+  border-left: 2px dashed #555;
+  border-right: 2px dashed #555;
+  /* border-radius: 1em; */
+  filter: drop-shadow(1rem 1rem 0 rgba(50, 50, 50, 0.6));
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image wrapper to maintain aspect ratio */
+.project-card-image-wrapper {
+  width: 100%;
+  height: 0;
+  padding-top: 66.66%;
+  /* 3:2 aspect ratio */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image fills wrapper and can overflow for zoom effect */
+.project-card-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* overflow zoom */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+
+  filter:  url(#grainy) brightness(110%) saturate(1.2) 
+    hue-rotate(-5deg) contrast(0.9);
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.05);
+  filter: brightness(120%) saturate(1) 
+    hue-rotate(-5deg) contrast(120%);
+}
+
+/* Text area */
+.project-card-text {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-card-title {
+  margin: 0 0 0.5rem 0;
+  font-style: oblique;
+  /* font-size: 1.2rem; */
+}
+
+.project-card-year {
+  font-weight: lighter;
+  /* font-size: 1.2rem; */
+}
+
+.project-card-summary {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Detail */
+.project-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 1.5rem;
+  overflow-y: scroll;
+}
+
+/* Actual content of details */
+.project-details-content {
+  position: absolute;
+  top: 0%;
+  padding: 10% 10%;
+  background-color: none;
+  width: 50%;
+  color: white;
+  /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+}
+.project-details-content h2 {
+  color: white;
+  text-align: left;
+  font-style: italic;
+}
+.project-details-content a {
+  color: limegreen;
+  text-align: left;
+}
+.project-details-content a:hover {
+  color: white;
+  text-shadow: 0 0 10px limegreen; /* light-blue glow */
+  transition:  text-shadow 1s;
+}
+.project-details-content .project-details-description {
+  text-align: left;
+}
+
+/* Close button */
+.project-details-close {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  background-color: floralwhite;
+  color: #555;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+}
+

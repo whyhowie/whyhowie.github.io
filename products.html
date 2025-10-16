@@ -34,44 +34,55 @@
 <body>
 
   <div id="content">
-  <div id="header" ></div>
-  <br>
-    <div class="card shadowed grainy">
-      <div class="card-content">
-        <div class="card-image">
-          <img src="assets/Puppet_Demo_4K.jpg">
+    <div id="header" ></div>
+      <br>
+      <!-- INTRO CARD -->
+      <div class="card shadowed grainy">
+        <div class="card-content">
+          <div class="card-image">
+            <img src="assets/Puppet_Demo_4K.jpg">
+          </div>
+          <div class="card-text">
+            <h2 class="text-tight-2" style="text-align: left;"> Design <br>Expedition </h2>
+            <h3 class="text-tight-2" style="text-align: left;"> Some science, some art. </h3>
+            <div class="gradient-rect" style="--start-color: rgba(50,205,50,0.5); --end-color: rgba(0,0,0,0);"></div>
+            <p>This is a showcase of my research work and previous product design projects.
+              I'm currently transitioning from a Mechanical Engineer to a UX Researcher and Product Designer.
+              <br><br> I believe that this collection will grow the fastest.
+            </p>
+          </div>
         </div>
-        <div class="card-text">
-          <h2 class="text-tight-2" style="text-align: left;"> Design <br>Expedition </h2>
-          <h3 class="text-tight-2" style="text-align: left;"> Some science, some art. </h3>
-          <div class="gradient-rect" style="--start-color: rgba(50,205,50,0.5); --end-color: rgba(0,0,0,0);"></div>
-          <p>This is a showcase of my research work and previous product design projects.
-            I'm currently transitioning from a Mechanical Engineer to a UX Researcher and Product Designer.
-            <br><br> I believe that this collection will grow the fastest.
+      </div>
+
+
+
+
+      <!-- UNDER CONSTRUCTION INFO -->
+      <div>
+        <br>
+        <div class="background-highlight">
+          <p style="text-align: center;">This page is under construction. <br>
+            Please visit
+            <a href="https://howiewang.wixsite.com/portfolio/product">my Wix page</a>.
           </p>
         </div>
       </div>
-    </div>
 
+      <!-- PROJECT CARDS -->
+      <div id="projects-container" style="height: auto;"></div>
+      <div class="project-details-container" style="display:none;"></div>
 
-    <div>
       <br>
-      <div class="background-highlight">
-        <p style="text-align: center;">This page is under construction. <br>
-          Please visit
-          <a href="https://howiewang.wixsite.com/portfolio/product">my Wix page</a>.
-        </p>
-        
-      </div>
-    </div>
 
-    <br>
+      <!-- SCRIPTS -->
+      <script type="text/javascript" src="projects/project-data.js"></script>
+      <script type="text/javascript" src="components/project-cards.js"></script>
 
-    
-    <script type="text/javascript" src="gallery.js"></script>
-    <script type="text/javascript" src="photo-wall.js"></script>
+      <script type="text/javascript" src="components/gallery.js"></script>
+      <script type="text/javascript" src="components/photo-wall.js"></script>
 
-    <div id="footer"></div>
+      <!-- FOOTER -->
+      <div id="footer"></div>
   </div>
 </div>
 <script>

@@ -2,6 +2,7 @@
 @import "components/gallery.css";
 @import "Fontawesome/css/all.css";
 @import "components/photo-wall.css";
+@import "components/project-cards.css";
 
 * {
   font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
@@ -18,8 +19,8 @@
   --header-nav-height: calc(var(--header-logo-size)*2 + var(--nav-height)*1.5);
 }
 
-
 html, body, body:after {
+  
   scroll-behavior: smooth;
   min-width: var(--page-min-width);
   /* max-width: var(--page-max-width); */
@@ -158,7 +159,7 @@ body:after {
     position: -webkit-sticky;
     position: sticky;
     top: -13rem;
-    z-index: 10000;
+    z-index: 10;
     /* margin-bottom: 1rem; */
 }
 
@@ -176,7 +177,7 @@ body:after {
   background: 
 	  linear-gradient(320deg, rgba(0,0,200,0.3), floralwhite),
     floralwhite;
-  border-radius: 1rem;
+  border-radius: 0 0 1rem 1rem;
 }
   
 #header-nav:after {
@@ -339,7 +340,7 @@ body:after {
 
 
 
-/* ----------------------LARGE CARDS---------------------- */
+/* ----------------------INTRO CARD---------------------- */
 .card {
   width: 97.5%;
   margin: auto;
@@ -385,8 +386,8 @@ body:after {
   max-width: 130%;
   max-height: 80vh;
   object-position: right center;
-  filter:  url(#grainy) brightness(120%) saturate(3) 
-    hue-rotate(-5deg) contrast(0.9);
+  filter:  url(#grainy) brightness(120%) saturate(2) 
+    hue-rotate(-5deg) contrast(120%);
   padding: 0 1rem 1rem 0;
   box-sizing: border-box;
 }
@@ -448,7 +449,7 @@ body:after {
 
 
 
-/* ----------------------PROJECT CARDS---------------------- */
+/* ----------------------(LEGACY) PROJECT CARDS---------------------- */
 .project {
   display: flex;
   width: 97.5%;
@@ -526,7 +527,8 @@ body:after {
 
 /* ----------------------FOOTER STUFF---------------------- */
 
-.footer-wrapper {
+
+.footer {
   /* position: absolute; */
   /* bottom: 0; */
   width: 97.5%;
@@ -535,11 +537,9 @@ body:after {
   margin: auto;
   background: 
 	  linear-gradient(140deg, rgba(0,0,200,0.3), rgba(0,0,0,0.1));
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0 ;
   border-top: 2px solid #555;
   overflow: hidden;
-}
-.footer {
   height:5rem; 
   display:flex;
   align-items: center; 
