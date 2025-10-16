@@ -1,7 +1,7 @@
 /* Currently Underdevelopment */
-@import "gallery.css";
+@import "components/gallery.css";
 @import "Fontawesome/css/all.css";
-@import "photo-wall.css";
+@import "components/photo-wall.css";
 
 * {
   font-family: Georgia, SimSun, "宋体", STSong, "华文宋体", serif;
@@ -383,6 +383,7 @@ body:after {
   object-fit: cover;
   height: 100%;
   max-width: 130%;
+  max-height: 80vh;
   object-position: right center;
   filter:  url(#grainy) brightness(120%) saturate(3) 
     hue-rotate(-5deg) contrast(0.9);
@@ -401,6 +402,7 @@ body:after {
   padding: 3rem;
   text-align: left;
   box-sizing: border-box;
+  margin: 2rem 0;
 }
 
 .globe-canvas {
@@ -427,7 +429,6 @@ body:after {
   .card-content img {
     height: 100%;
     width: 100%;
-    transform: translateX(0%);
   }
 
   .card-content .card-text {
