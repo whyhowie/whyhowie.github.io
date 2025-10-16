@@ -56,6 +56,11 @@ html, body, body:after {
   opacity: 1;
 }
 
+.glow {
+  /* text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  text-shadow: 0 0 10px limegreen; 
+}
+
 .gradient-rect {
   height: 1rem;
   width: 100%;
@@ -304,8 +309,32 @@ body:after {
   margin: auto;
 }
 
+.my-name {
+  position: relative;
+  cursor: pointer;
+  text-shadow: 0 0 10px limegreen; /* light-blue glow */
+}
 
-
+/* Show alternate name on hover */
+.my-name::after {
+  content: "王 弘御";       /* your name in another language */
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  text-shadow: 0 0 10px limegreen; /* light-blue glow */
+  font-weight: bold;
+  font-size: large;
+}
+.my-name:hover {
+  color: transparent;
+  text-shadow: none;
+}
+.my-name:hover::after {
+  opacity: 1;
+  color: black; /* or inherit */
+}
 
 
 
@@ -345,7 +374,7 @@ body:after {
 .card-content .card-image {
   display: block;
   overflow: hidden;
-  flex: 2;
+  flex: 2.5;
   box-sizing: border-box;
   filter:  drop-shadow(1rem 1rem 0 rgba(25, 25, 112, 0.6));
 }
@@ -353,8 +382,7 @@ body:after {
   display: block;
   object-fit: cover;
   height: 100%;
-  max-width: 140%;
-  /* max-height: 100%; */
+  max-width: 130%;
   object-position: right center;
   filter:  url(#grainy) brightness(120%) saturate(3) 
     hue-rotate(-5deg) contrast(0.9);
@@ -363,7 +391,7 @@ body:after {
 }
 
 .card-content .card-text {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 200, 0.05);
   display: block;
   position: relative;
   height: 100%;
@@ -399,6 +427,7 @@ body:after {
   .card-content img {
     height: 100%;
     width: 100%;
+    transform: translateX(0%);
   }
 
   .card-content .card-text {
