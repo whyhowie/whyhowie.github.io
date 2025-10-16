@@ -103,8 +103,10 @@
   position: absolute;
   top: 0%;
   padding: 10% 10%;
+  margin: auto;
   background-color: none;
   width: 50%;
+  min-width: 400px;
   color: white;
   /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
 }
