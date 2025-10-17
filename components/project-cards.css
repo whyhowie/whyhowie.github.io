@@ -125,13 +125,13 @@
   
   border-left: dashed 2px floralwhite;
   border-right: dashed 2px floralwhite;
-  font-size: small;
+  font-size: medium;
   /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
 }
 .project-details-content h2 {
   text-align: left;
   font-style: italic;
-  font-size: x-large;
+  font-size: xx-large;
 }
 .project-details-content a {
   color: midnightblue;
