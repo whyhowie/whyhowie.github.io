@@ -3,7 +3,7 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   box-sizing: border-box;
 }
 
@@ -85,17 +85,30 @@
 /* Detail */
 .project-details {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.95);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers horizontally */
+  width: 90%;
+  height: 90%;
+  background-color: floralwhite;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  font-size: 1.5rem;
   overflow-y: scroll;
+}
+
+.project-overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999; /* sits behind .project-details box */
 }
 
 /* Actual content of details */
@@ -107,23 +120,24 @@
   background-color: none;
   width: 50%;
   min-width: 400px;
-  min-height: 100vh;
-  color: white;
+  min-height: 90vh;
+  color: black;
+  
   border-left: dashed 2px floralwhite;
   border-right: dashed 2px floralwhite;
+  font-size: small;
   /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
 }
 .project-details-content h2 {
-  color: white;
   text-align: left;
   font-style: italic;
+  font-size: x-large;
 }
 .project-details-content a {
-  color: limegreen;
+  color: midnightblue;
   text-align: left;
 }
 .project-details-content a:hover {
-  color: white;
   text-shadow: 0 0 10px limegreen; /* light-blue glow */
   transition:  text-shadow 1s;
 }
@@ -147,5 +161,6 @@
   justify-content: center;
   cursor: pointer;
   z-index: 1001;
+  box-shadow: -0.5rem -0.5rem 0 limegreen;
 }
 
