@@ -74,7 +74,7 @@ $.get('projects/project-template.html', function (templateHtml) {
         // Determine shadow color
         const shadowColor = project.color || getRandomColor();
         project.color = shadowColor;
-        $card.css('filter', `drop-shadow(1rem 1rem 0 ${shadowColor})`);
+        $card.find('.project-card').css('box-shadow', `1rem 1rem 0 ${shadowColor}`);
 
 
         $card.on('click', () => openDetails(project));
