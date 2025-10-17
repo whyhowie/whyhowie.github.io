@@ -16,16 +16,17 @@
   border-left: 2px dashed #555;
   border-right: 2px dashed #555;
   /* border-radius: 1em; */
-  box-shadow: 1rem 1rem 0 rgba(50, 50, 50, 0.6);
+  /* box-shadow: 1rem 1rem 0 rgba(50, 50, 50, 0.6); */
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) rotateZ(1deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Image wrapper to maintain aspect ratio */
@@ -48,7 +49,6 @@
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease;
-
   filter:  url(#grainy) brightness(110%) saturate(1.2) 
     hue-rotate(-5deg) contrast(0.9);
 }
@@ -154,11 +154,11 @@
   color: #555;
   width: 4rem;
   height: 4rem;
-  border-radius: 0.5rem;
   font-size: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid 2px #555;
   cursor: pointer;
   z-index: 1001;
   box-shadow: -0.5rem -0.5rem 0 limegreen;
