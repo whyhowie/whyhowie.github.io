@@ -6,8 +6,8 @@ const projects = [
         summary: "Short description...",
         image: "https://placehold.co/400x300?text=Robot\\nWrangling",
         gallery: [
-            "https://placehold.co/600x400?text=Project\\nA+1",
-            "https://placehold.co/600x400?text=Project\\nA+2"
+            "https://placehold.co/600x400?text=Robot\\nWrangling+1",
+            "https://placehold.co/600x400?text=Robot\\nWrangling+2"
         ],
         description: `.`,
     },
@@ -15,13 +15,23 @@ const projects = [
         title: "Notification Timing in Autonomous Vehicles",
         year: "2023 - 2025",
         summary: "Short description...",
-        image: "https://placehold.co/400x300?text=Notifications\\nin AVs",
+        image: "https://placehold.co/400x300?text=Notifications\\nin+AVs",
         gallery: [
-            "https://placehold.co/600x400?text=Project\\nA+1",
-            "https://placehold.co/600x400?text=Project\\nA+2"
+            "https://placehold.co/600x400?text=Notifications\\nin+AVs+1",
+            "https://placehold.co/600x400?text=Notifications\\nin+AVs+2"
         ],
         description: `<h4><a href="https://doi.org/10.1145/3744333.3747831" target="_blank" rel="noopener noreferrer">
-            See publication here!</a></h4>`,
+            See publication here!</a></h4>
+            <h4><a href="https://doi.org/10.1184/R1/c.7894613" target="_blank" rel="noopener noreferrer">
+            See artifact collection here!</a></h4>
+            <p>
+                Future high-level autonomous vehicles (AVs) will enable drivers to engage in non-driving-related tasks (NDRTs) during autopilot. 
+                Occasionally, an in-vehicle agent may need to notify drivers of important, yet not urgent, information. 
+                Through a four-session interruptibility study on a desktop autonomous driving simulator, we investigated how drivers assess their availability to receive notifications by rating moments as good or bad for interruption. 
+                Our results suggest drivers fall into four notification availability groups: always available, prioritizing NDRTs, task-content dependent, and mental-state dependent. 
+                Using multimodal behavioral data of the participants and vehicle data from the simulation, we trained a proof-of-concept classification model to determine the appropriate timing to send non-emergency notifications to drivers doing NDRTs. 
+                Head pose and gaze direction data from the eye tracker were crucial in the predictions. Based on our quantitative modeling and qualitative observation, we discuss the feasibility of notification timing prediction in the real world and design considerations from individual, task, and context perspectives.
+            </p`,
     },
     {
         title: "Robot Expression Design through Puppeteering",

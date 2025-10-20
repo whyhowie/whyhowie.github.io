@@ -28,17 +28,24 @@ function getRandomColor() {
 
 
 
-// Gallery behavior
+// Details behavior
 function openDetails(project) {
     const $details = $('.project-details-container');
     $.get('projects/project-details.html', function (templateHtml) {
         $details.html(templateHtml); // insert template
         
-
         $details.find('.project-details-title').text(project.title);
+        $details.find('.project-details-year').text(project.year);
         $details.find('.project-details-description').html(project.description);
 
         $details.fadeIn(100);   // Show the details
+
+
+        project.gallery.forEach(img_url => {
+            $details.find('.project-details-gallery').append(
+                `<img src=${encodeURI(img_url)}>`
+            )
+        })
 
         // Close button
         $details.find('.project-details-close').off('click').on('click', () => {

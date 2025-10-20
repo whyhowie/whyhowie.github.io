@@ -82,6 +82,9 @@
   color: #333;
 }
 
+
+
+
 /* Detail */
 .project-details {
   position: fixed;
@@ -143,6 +146,16 @@
 }
 .project-details-content .project-details-description {
   text-align: left;
+}
+
+.project-details-year {
+  font-weight: lighter;
+}
+
+/* Details gallery */
+.project-details-gallery img {
+  width: 90%;
+  border: solid 2px #555;
 }
 
 /* Close button */
