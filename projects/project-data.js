@@ -15,7 +15,7 @@ const projects = [
         title: "Notification Timing in Autonomous Vehicles",
         year: "2023 - 2025",
         summary: "Short description...",
-        image: "https://placehold.co/400x300?text=Notifications\\nin+AVs",
+        image: "portfolio_stuff/Research/Notification Timing/New Demo First Frame.jpg",
         video: "",
         gallery: [
             "portfolio_stuff/Research/Notification Timing/0001.jpg",
@@ -58,7 +58,7 @@ const projects = [
             "portfolio_stuff/Research/Notification Timing/0038.jpg",
             "portfolio_stuff/Research/Notification Timing/0039.jpg",
             "portfolio_stuff/Research/Notification Timing/0040.jpg",
-            "portfolio_stuff/Research/Notification Timing/0041.jpg",
+            // "portfolio_stuff/Research/Notification Timing/0041.jpg",
         ],
         description: `<h4><a href="https://doi.org/10.1145/3744333.3747831" target="_blank" rel="noopener noreferrer">
             See publication here!</a></h4>
