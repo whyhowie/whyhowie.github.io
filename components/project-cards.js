@@ -30,15 +30,22 @@ function getRandomColor() {
 
 // Details behavior
 function openDetails(project) {
-    const $details = $('.project-details-container');
+
     $.get('projects/project-details.html', function (templateHtml) {
+        const $details = $('<div class="project-details-container"></div>').hide();
+        $('body').append($details);
+        const $overlay = $('<div class="project-overlay"></div>').hide(); // start hidden
+        $('body').append($overlay);
+
         $details.html(templateHtml); // insert template
         
         $details.find('.project-details-title').text(project.title);
         $details.find('.project-details-year').text(project.year);
         $details.find('.project-details-description').html(project.description);
 
+        $overlay.fadeIn();
         $details.fadeIn();   // Show the details
+        
 
 
         project.gallery.forEach(img_url => {
@@ -54,12 +61,14 @@ function openDetails(project) {
 
         // Close button
         $details.find('.project-details-close').off('click').on('click', () => {
+            $overlay.fadeOut();
             $details.fadeOut();
         });
 
         // Click outside to close
         $details.off('click').on('click', e => {
             if ($(e.target).is('.project-details')) {
+                $overlay.fadeOut();
                 $details.fadeOut();
             }
         });
