@@ -24,7 +24,7 @@ div:has(>.enable-lightbox):hover {
 
 @media screen and (max-width: 500px) {
     #larger-image{
-        width: 100vw;
+        width: 100%;
         max-height: 90vh;
         
     }
