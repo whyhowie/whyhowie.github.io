@@ -1,0 +1,55 @@
+
+
+/* ----------------------(LEGACY) PROJECT CARDS---------------------- */
+.project {
+  display: flex;
+  width: 97.5%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: end;
+  margin: 1rem auto;
+  padding-top: 2em;
+  background-color: white;
+  border-top: 2px dashed #555;
+  border-bottom: 2px dashed #555;
+
+  /* background: 
+	  linear-gradient(90deg, rgba(200,200,255,1), rgba(255,255,255,0.8)); */
+}
+
+.project h2, .project h3 {
+  margin: 1rem auto;
+  width: 80%;
+  display: block;
+  text-align: left;
+}
+.project h2 {
+  font-style: italic;
+}
+.project h3 {
+  font-weight: lighter;
+  /* font-style: italic; */
+}
+.project .description {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.project-halves {
+  width: 97.5%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.project.left-half, .project.right-half {
+  text-align: center;
+  width: 49%;
+  /* height: 50rem; */
+}
+

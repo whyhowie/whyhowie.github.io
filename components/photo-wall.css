@@ -5,8 +5,9 @@
     width: 90%;
     height: 50rem;
     overflow-y: scroll;
-    margin-bottom: 4rem;
-    padding: 0.5rem;
+    margin: 1em 1em 4em 0em;
+    border: solid 4px #555;
+    box-shadow: 1rem 1rem 0 rgba(25, 25, 112, 0.6);
 }
 
 
@@ -23,12 +24,9 @@
 
 .photo-wall-columns div img {
     box-sizing: border-box;
-
     width: 100%;
-    
     border: 0.25rem solid white;
-
-    margin: 0.25rem 0;
+    margin: 0.25rem;
 }
 
 .photo-wall-columns div img:hover {
@@ -79,9 +77,10 @@
     margin-bottom: 4rem;
 
     box-sizing: border-box;
-    /* border: solid 10px lightcoral; */
+    border: solid 4px #555;
     /* border-radius: 1rem; */
-    box-shadow: inset 0px 0px 20px #aaa;
+    /* box-shadow: inset 0px 0px 20px #aaa; */
+    box-shadow: 1rem 1rem 0 rgba(25, 25, 112, 0.6);
     text-align: left;
 }
 
@@ -108,12 +107,12 @@
 .photo-wall-row {
   
     mask-image: linear-gradient( to right, transparent,
-        white 5%,
-        white 95%,
+        white 2%,
+        rgba(255, 255, 255, 0.8) 97%,
         transparent 100%);
     -webkit-mask-image: linear-gradient( to right,transparent,
-        white 5%,
-        white 95%,
+        white 2%,
+        rgba(255, 255, 255, 0.8) 97%,
         transparent 100%);
 }
 
@@ -141,21 +140,18 @@
 /* ---------------------------------------------------------------- */
 /* Grid photo wall */
 .photo-wall-grid {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-gap: 0.5rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 12rem;
-
+    box-sizing: border-box;
     height: 50rem;
-    overflow-y: scroll;
-
-    padding: 0.5rem;
-    margin-bottom: 4rem;
 }
 
 
-/* Fade out at bottom */
+/* Fade out at bottom */ */
 .photo-wall-grid {
   
     mask-image: linear-gradient(white,
@@ -168,11 +164,8 @@
 
 .photo-wall-grid div {
     box-sizing: border-box;
-    overflow: hidden;
-
-    box-sizing: border-box;
-    
     border: solid 0.25rem white;
+    overflow: hidden;
 }
 
 .photo-wall-grid img {
@@ -208,4 +201,28 @@
     width: 120%;
     height: 120%;
     object-position: 25% 61.8%;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* Single photo*/
+
+.single-photo {
+  width: 80%;
+  margin-bottom: 4rem;
+  margin-top: 0;
+}
+
+.single-photo div{
+  width: 100%;
+  height: 100%;
+  border: solid 4px #555;
+  /* box-shadow: 1rem 1rem 0 rgba(25, 25, 112, 0.6); */
+}
+
+.single-photo img {
+  width: 100%;
+  height: 100%;
+  /* max-height: 25rem;
+  object-fit: scale-down; */
 }

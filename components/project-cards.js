@@ -38,24 +38,29 @@ function openDetails(project) {
         $details.find('.project-details-year').text(project.year);
         $details.find('.project-details-description').html(project.description);
 
-        $details.fadeIn(100);   // Show the details
+        $details.fadeIn();   // Show the details
 
 
         project.gallery.forEach(img_url => {
             $details.find('.project-details-gallery').append(
-                `<img src=${encodeURI(img_url)}>`
+                `<div>
+                    <img class="enable-lightbox" src=${encodeURI(img_url)}>
+                </div>`
             )
         })
 
+        // Make lightbox (requires img-lightbox.js)
+        makeLightbox(); 
+
         // Close button
         $details.find('.project-details-close').off('click').on('click', () => {
-            $details.fadeOut(100);
+            $details.fadeOut();
         });
 
         // Click outside to close
         $details.off('click').on('click', e => {
             if ($(e.target).is('.project-details')) {
-                $details.fadeOut(100);
+                $details.fadeOut();
             }
         });
     });

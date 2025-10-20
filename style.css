@@ -2,6 +2,7 @@
 @import "components/gallery.css";
 @import "Fontawesome/css/all.css";
 @import "components/photo-wall.css";
+@import "components/legacy-project-cards.css";
 @import "components/project-cards.css";
 
 * {
@@ -60,6 +61,11 @@ html, body, body:after {
 .glow {
   /* text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   text-shadow: 0 0 10px limegreen; 
+}
+
+.round-box {
+  border-radius: 50%;
+  /* background-color: red; */
 }
 
 .gradient-rect {
@@ -168,7 +174,7 @@ body:after {
   min-width: 550px;
   width: 97.5%;
   height: calc(var(--header-nav-height) - 1rem);
-  z-index: 100;
+  /* z-index: 100; */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1); */
   margin: auto;
   overflow: hidden;
@@ -192,7 +198,7 @@ body:after {
   width: 500%;
   margin:auto;
   height: calc(var(--header-nav-height) * 2);
-  z-index: -10;
+  z-index: -1;
   animation: bgLinear 2.5s linear infinite;
   will-change: auto;
 }
@@ -283,7 +289,7 @@ body:after {
   background-color: AliceBlue;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: background-color .3s, box-shadow .3s, transform .3s;
-  z-index: 8;
+  z-index: 20;
   border: dashed 2px #555;
 }
 #nav .nav-item.active {
@@ -291,7 +297,7 @@ body:after {
   transform-origin: 50% 50%;
   background-color: floralwhite;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: auto;
+  z-index: 19;
   border: dashed 2px #555;
   /* border-right: dashed 2px #555; */
 }
@@ -306,7 +312,6 @@ body:after {
 /* ----------------------CONTENT STUFF---------------------- */
 #content {
   max-width: var(--page-max-width);
-  z-index: -2;
   margin: auto;
 }
 
@@ -451,63 +456,6 @@ body:after {
 
 
 
-
-/* ----------------------(LEGACY) PROJECT CARDS---------------------- */
-.project {
-  display: flex;
-  width: 97.5%;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  scroll-snap-align: end;
-  margin: 1rem auto;
-  padding-top: 2em;
-  background-color: white;
-  border-top: 2px dashed #555;
-  border-bottom: 2px dashed #555;
-}
-
-.project h2, .project h3 {
-  margin-block-start: 0;
-  text-align: center;
-}
-.project h3 {
-  font-weight: lighter;
-  font-style: italic;
-}
-.project .description {
-  text-align: left;
-  width: 80%;
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-.project-halves {
-  width: 97.5%;
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.project.left-half, .project.right-half {
-  text-align: center;
-  width: 49%;
-  /* height: 50rem; */
-}
-
-.single-photo {
-  width: 80%;
-  margin-bottom: 4rem;
-  margin-top: 0;
-}
-
-.single-photo img {
-  width: 100%;
-  /* max-height: 25rem;
-  object-fit: scale-down; */
-}
 
 
 

@@ -14,7 +14,9 @@ function enableLightboxes (selector) {
   $(selector).click(function () {
     var projectTitle = $(this).closest(".project").children("h2")[0].textContent
     var $img = $(this);
-    $('#larger-image').html($img.clone().add(`<p id="project-image-title">${projectTitle}</p>`)).add($('#image-overlay')).fadeIn();
+    $('#larger-image').html(
+      $img.clone().removeClass('enable-lightbox').add(`<p id="project-image-title">${projectTitle}</p>`)
+    ).add($('#image-overlay')).fadeIn();
 
     // Stop all autoscrolling
     try {
