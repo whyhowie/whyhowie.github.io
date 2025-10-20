@@ -93,9 +93,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  
-  width: 90%;
-  height: 90%;
+  box-sizing: border-box;
+  width: calc(100% - 4rem);
+  height: calc(100% - 2rem);
   background-color: floralwhite;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
